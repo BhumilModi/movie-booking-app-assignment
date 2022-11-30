@@ -1,0 +1,50 @@
+import React from "react";
+import {Link, Route, Routes, useNavigate} from "react-router-dom";
+import Navbar from "./Navbar";
+function Login() {
+  const navigate = useNavigate();
+  const user = {
+    name: "Bhumil",
+  };
+  const userLogin = () => {
+    localStorage.setItem("user", JSON.stringify(user));
+    navigate("/");
+  };
+
+  return (
+    <div className="flex flex-col justify-center items-center">
+      <Navbar />
+      <div className="h-[60vh] bg-gray-100 w-1/3 my-[10vh] flex flex-col p-[40px]">
+        <div className="text-[36px] mx-auto">Login</div>
+        <div className="text-[30px] mt-4 mb-2">E-mail</div>
+        <input
+          type="text"
+          className="w-[90%] border-2 border-black p-2"
+          placeholder="E-mail"
+        />
+        <div className="text-[30px] mt-4 mb-2">Password</div>
+        <input
+          type="password"
+          className="w-[90%] border-2 border-black p-2"
+          placeholder="Password"
+        />
+        <div className="flex justify-between items-center mt-10 mr-10">
+          <Link
+            to="/signUp"
+            className="text-[24px] ml-5 text-blue-600 cursor-pointer"
+          >
+            Sign Up
+          </Link>
+          <button
+            className="bg-blue-600 w-1/3 h-[50px] text-white"
+            onClick={() => userLogin()}
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Login;
