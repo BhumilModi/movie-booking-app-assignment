@@ -1,7 +1,9 @@
 ## Steps to run the App Locally
 
+1. In the terminal run npm start to run the App in development mode on http://localhost:3000 .
+2. Open up another terminal anf run npm run start-server to run the backend server for fetching and posting data from MongoDB clusters.
+3. Open http://localhost:3000 in any browser of your choice.
 
-# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
