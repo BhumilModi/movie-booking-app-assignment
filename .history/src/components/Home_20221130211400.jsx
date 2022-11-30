@@ -38,7 +38,7 @@ function Home() {
               ))}
             </div>
           ) : (
-            <p className="text-[26px]">No Bookings Yet. Go to Book a ticket.</p>
+            <p className="text-[26px]">No Bookings Yet</p>
           )}
         </div>
       </div>
